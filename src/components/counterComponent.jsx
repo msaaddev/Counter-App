@@ -25,20 +25,14 @@ class Counter extends Component {
     this.setState({ count: this.state.count + 1});
   }
 
-  handleDecrement = product => {
-    console.log(product);
-    this.setState({count: this.state.count - 1});
-  }
-
   render() {
     return (
       <div>
-        <button onClick = {() => this.handleDecrement("Decremented")} className = "btn btn-secondary btn-sm">Decrement</button>
         <span style={this.styles} className={this.getCountClasses()}>
           {this.formatCount()}
         </span>
         <button onClick = {() => this.handleIncrement("Incremented")} className="btn btn-secondary btn-sm">Increment</button>
-        <ul>{this.renderTags()}</ul>
+        {/* <ul>{this.renderTags()}</ul> */}
       </div>
     );
   }
