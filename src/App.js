@@ -13,7 +13,7 @@ class App extends Component {
     ]
   };
 
-  counterDelete = counterId => {
+  handleDelete = counterId => {
     const newArr = this.state.counters.filter(c => c.id !== counterId);
     this.setState({ counters: newArr });
   };
@@ -37,12 +37,14 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar />
+        <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length} />
         <main className="container">
-          <Counters counters = {this.state.counters}
-          onReset={this.handleReset}
-          onIncrement={this.handleIncrement}
-          onDelele={this.counterDelete} />
+          <Counters
+            counters={this.state.counters}
+            onReset={this.handleReset}
+            onIncrement={this.handleIncrement}
+            onDelele={this.handleDelete}
+          />
         </main>
       </React.Fragment>
     );

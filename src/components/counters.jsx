@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Counter from "./counterComponent";
 
 class Counters extends Component {
-
   render() {
     return (
       <div>
@@ -14,10 +13,10 @@ class Counters extends Component {
         </button>
         {this.props.counters.map(counter => (
           <Counter
+            counter={counter}
             key={counter.id}
             onIncrement={this.props.onIncrement}
             onDelete={this.props.onDelete}
-            counter={counter}
           />
         ))}
       </div>
