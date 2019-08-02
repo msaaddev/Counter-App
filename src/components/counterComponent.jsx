@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-
-  componentDid
-
   render() {
     return (
       <div className="container">
