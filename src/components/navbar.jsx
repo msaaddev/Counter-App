@@ -7,6 +7,7 @@ const NavBar = ({totalCounters} = this.props) => {
           Navbar {" "}
           <span className="badge badge-pill badge-secondary">
               {totalCounters}
+              
           </span>
         </a>
       </nav>
